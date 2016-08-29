@@ -1,0 +1,18 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 19px;
+    line-height: 1.5;
+    margin: 0;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #555;
+    min-width: 300px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
