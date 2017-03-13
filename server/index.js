@@ -1,13 +1,14 @@
 const koa = require('koa');
-const app = koa();
+const app = new koa();
 const router = require('koa-router')({
     prefix: '/api'
 });
 const serve = require('koa-static');
 
-router.get('/', function *(next) {
-    this.status = 200;
-    this.body = 'test';
+router.get('/', async function(ctx, next) {
+    ctx.status = 200;
+    ctx.body = 'test';
+    await next();
 });
 
 app.use(router.routes());
